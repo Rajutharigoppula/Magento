@@ -56,6 +56,4 @@ Feature: Order Module (Admin)
   Scenario: order creation from Magento admin with the Cash on delivery payment method
 @Test34
   Scenario: Order creation from Magento admin with the Check Payment method
-@Test35
-  Scenario: Order creation from Magento admin with the Authorize .net Direct post payment method
     
