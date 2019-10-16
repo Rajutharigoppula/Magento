@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -46,7 +47,7 @@ public class Gluecode {
 		}
 		
 	
-	@Given("^open application with \"([^\"]*)\"$")
+	@Given("^open application with \"(.*)\"$")
 	public void method2(String br) throws InterruptedException
 	  {
 		if(br.equalsIgnoreCase("chrome"))
@@ -280,4 +281,102 @@ public class Gluecode {
 	wait.until(ExpectedConditions.visibilityOf(Pd.savedrulemsg));
 
 	}
+	
+	
+	@Then("^Click on sales and create new order with existing customer \"(.*)\"$")
+	public void method17(String arg1) throws InterruptedException
+	{
+	Od.Sales();
+	Thread.sleep(2000);
+	Od.Orders1();
+	Thread.sleep(3000);
+	Od.createno();
+	Thread.sleep(3000);
+	Od.filteremail(arg1);
+	Od.search();
+	Thread.sleep(3000);
+	Od.selectcustomer();
+	Thread.sleep(6000);
+	wait.until(ExpectedConditions.visibilityOf(Od.submitorder));
+	Thread.sleep(3000);
+
+	}
+	
+	@And("^Select product to place an order \"(.*)\"$")
+	public void method16(String arg2) throws InterruptedException
+	{
+	Od.addproducts();
+	Thread.sleep(2000);
+	Od.sku(arg2);
+	Thread.sleep(3000);
+	Od.skusearch();
+	Thread.sleep(3000);
+	Od.selectproduct();
+	Thread.sleep(3000);
+	Od.addselected();
+	Thread.sleep(3000);
+
+	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", Od.vat);
+
+	Thread.sleep(3000);
+	Od.selectshipping();
+	Thread.sleep(3000);
+	wait.until(ExpectedConditions.visibilityOf(Od.uspstext));
+	Thread.sleep(3000);
+	}
+	
+	@Then("^Select flatrate shipping$")
+	public void method18() throws InterruptedException
+	{
+	Od.flatrate();
+	Thread.sleep(3000);
+
+	}
+	
+	@And("^Select check payment method \"(.*)\"$")
+	public void method18(String arg3) throws InterruptedException
+	{
+	Od.checkorder();
+	Thread.sleep(3000);
+	Od.checknumber(arg3);
+	Thread.sleep(3000);
+	Od.oc();
+	Thread.sleep(5000);
+	}
+	
+	@And("^Click on submit order$")
+	public void method19() throws InterruptedException
+	{
+	Od.submitorder();
+	Thread.sleep(2000);
+	wait.until(ExpectedConditions.visibilityOf(Od.ordersuccessmsg))	;
+	Thread.sleep(2000);
+
 }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+

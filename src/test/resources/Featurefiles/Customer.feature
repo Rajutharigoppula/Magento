@@ -16,7 +16,7 @@ Feature: Customer module (Admin)
     And click on save customer
     And close the browser
 
-  @Test11
+  @smoketest @Test11
   Scenario: Customer group creation from admin
     Given open application with "chrome"
     Then login in to admin "admin" and "i95devteam"

@@ -15,8 +15,19 @@ Feature: Order Module (Admin)
 @Test19
   Scenario: Create an order from Magento admin with the cart price rule and catalog price rule
   Pending due to index issue
-@Test20
+@smoketest  @Test20
   Scenario: Order creation with same billing and shipping address from Magento admin 
+  	Given open application with "chrome" 
+    Then login in to admin "admin" and "i95devteam"
+    Then Click on sales and create new order with existing customer "pointing@yahoo.com" 
+    And Select product to place an order "cape" 
+    Then Select flatrate shipping 
+    And Select check payment method "123456" 
+    And Click on submit order 
+    And close the browser
+    
+    
+  
 @Test21
   Scenario: Order creation with different billing and shipping address from Magento admin 
 @Test22
