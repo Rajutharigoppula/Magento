@@ -52,6 +52,5 @@ Feature: Order Module (Admin)
   Scenario: Order creation from Magento admin with the USPS shipping method
 @Test32
   Scenario: Order creation from Magento admin with Fedex Shipping method
-@Test33
-  Scenario: order creation from Magento admin with the Cash on delivery payment method
+
     
