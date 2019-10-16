@@ -50,5 +50,6 @@ Feature: Order Module (Admin)
   Scenario: Order creation from Magento admin with the UPS shipping method
 
 https://github.com/Rajutharigoppula/Magentoadmin.git
+https://github.com/Rajutharigoppula/Magento.git
 
     
