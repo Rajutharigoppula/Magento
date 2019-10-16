@@ -48,8 +48,7 @@ Feature: Order Module (Admin)
   Scenario: Order creation from Magento admin with the Flat rate shipping method
 @Test30
   Scenario: Order creation from Magento admin with the UPS shipping method
-@Test31
-  Scenario: Order creation from Magento admin with the USPS shipping method
+
 
 
     
