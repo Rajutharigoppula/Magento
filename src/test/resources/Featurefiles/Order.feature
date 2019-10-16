@@ -50,7 +50,6 @@ Feature: Order Module (Admin)
   Scenario: Order creation from Magento admin with the UPS shipping method
 @Test31
   Scenario: Order creation from Magento admin with the USPS shipping method
-@Test32
-  Scenario: Order creation from Magento admin with Fedex Shipping method
+
 
     
